@@ -56,6 +56,7 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
+
                         <li>
                             <a href="chart.html">
                                 <i class="fas fa-home"></i>Back To Site</a>
@@ -79,6 +80,60 @@
                         <li>
                             <a href="map.html">
                                 <i class="fas fa-map-marker-alt"></i>Messages</a>
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <!-- <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+
                         </li>
                         <li>
                             <a href="map.html">
@@ -105,6 +160,7 @@
                                 <i class="fas fa-home"></i>Back To Site</a>
                         </li>
                         <li>
+
                             <a href="chart.html">
                                 <i class="fas fa-home"></i>User</a>
                         </li>
@@ -127,6 +183,80 @@
                         <li>
                             <a href="map.html">
                                 <i class="fas fa-map-marker-alt"></i>Admin Profile</a>
+
+                            <a href="index.php">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="index.php">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <!-- <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="index.php">Login</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Register</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Forget Password</a>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <!-- <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="index.php">Button</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Progress Bars</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Switchs</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Grids</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Fontawesome Icon</a>
+                                </li>
+                                <li>
+                                    <a href="index.php">Typography</a>
+                                </li>
+                            </ul> -->
+
                         </li>
                     </ul>
                 </nav>
