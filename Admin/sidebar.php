@@ -59,7 +59,7 @@
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                            <!-- <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
                                     <a href="index.html">Dashboard 1</a>
                                 </li>
@@ -72,26 +72,26 @@
                                 <li>
                                     <a href="index4.html">Dashboard 4</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li>
-                            <a href="chart.html">
+                            <a href="index.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="index.php">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="index.php">
                                 <i class="far fa-check-square"></i>Forms</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
+                            <a href="index.php">
                                 <i class="fas fa-calendar-alt"></i>Calendar</a>
                         </li>
                         <li>
-                            <a href="map.html">
+                            <a href="index.php">
                                 <i class="fas fa-map-marker-alt"></i>Maps</a>
                         </li>
                         <li class="has-sub">
@@ -170,78 +170,78 @@
                         
                         </li>
                         <li>
-                            <a href="chart.html">
+                            <a href="index.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="index.php">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="index.php">
                                 <i class="far fa-check-square"></i>Forms</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
+                            <a href="index.php">
                                 <i class="fas fa-calendar-alt"></i>Calendar</a>
                         </li>
                         <li>
-                            <a href="map.html">
+                            <a href="index.php">
                                 <i class="fas fa-map-marker-alt"></i>Maps</a>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            <!-- <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="login.html">Login</a>
+                                    <a href="index.php">Login</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Register</a>
+                                    <a href="index.php">Register</a>
                                 </li>
                                 <li>
-                                    <a href="forget-pass.html">Forget Password</a>
+                                    <a href="index.php">Forget Password</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            <!-- <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="button.html">Button</a>
+                                    <a href="index.php">Button</a>
                                 </li>
                                 <li>
-                                    <a href="badge.html">Badges</a>
+                                    <a href="index.php">Badges</a>
                                 </li>
                                 <li>
-                                    <a href="tab.html">Tabs</a>
+                                    <a href="index.php">Tabs</a>
                                 </li>
                                 <li>
-                                    <a href="card.html">Cards</a>
+                                    <a href="index.php">Cards</a>
                                 </li>
                                 <li>
-                                    <a href="alert.html">Alerts</a>
+                                    <a href="index.php">Alerts</a>
                                 </li>
                                 <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
+                                    <a href="index.php">Progress Bars</a>
                                 </li>
                                 <li>
-                                    <a href="modal.html">Modals</a>
+                                    <a href="index.php">Modals</a>
                                 </li>
                                 <li>
-                                    <a href="switch.html">Switchs</a>
+                                    <a href="index.php">Switchs</a>
                                 </li>
                                 <li>
-                                    <a href="grid.html">Grids</a>
+                                    <a href="index.php">Grids</a>
                                 </li>
                                 <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                    <a href="index.php">Fontawesome Icon</a>
                                 </li>
                                 <li>
-                                    <a href="typo.html">Typography</a>
+                                    <a href="index.php">Typography</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </li>
                     </ul>
                 </nav>
