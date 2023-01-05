@@ -65,7 +65,7 @@
                                 <i class="fas fa-home"></i>User</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="./product.php">
                                 <i class="fas fa-table"></i>Products</a>
                         </li>
                         <li>
@@ -109,7 +109,7 @@
                                 <i class="fas fa-home"></i>User</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="./product.php">
                                 <i class="fas fa-table"></i>Products</a>
                         </li>
                         <li>
