@@ -42,7 +42,7 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="index.html" >
                             <img src="images/icon/logo.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
@@ -156,32 +156,32 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                     <li>
-                            <a href="chart.html">
+                            <a href="index.php">
                                 <i class="fas fa-home"></i>Back To Site</a>
                         </li>
                         <li>
 
-                            <a href="chart.html">
+                            <a href="index.php">
                                 <i class="fas fa-home"></i>User</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="index.php">
                                 <i class="fas fa-table"></i>Products</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="index.php">
                                 <i class="far fa-check-square"></i>Category</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
+                            <a href="orders.php">
                                 <i class="fas fa-calendar-alt"></i>Order</a>
                         </li>
                         <li>
-                            <a href="map.html">
+                            <a href="index.php">
                                 <i class="fas fa-map-marker-alt"></i>Messages</a>
                         </li>
                         <li>
-                            <a href="map.html">
+                            <a href="index.php">
                                 <i class="fas fa-map-marker-alt"></i>Admin Profile</a>
 
                             <a href="index.php">

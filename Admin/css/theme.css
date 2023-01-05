@@ -434,7 +434,7 @@ section {
 }
 
 .fa-hover a:hover {
-    color: #333;
+    color: #258687;
 }
 
 .main-content--pb30 {
@@ -1441,7 +1441,7 @@ section {
 }
 
 .account-item > .content > a:hover {
-    color: #666;
+    color: #258687;
 }
 
 .account-dropdown {
@@ -1505,7 +1505,7 @@ section {
 }
 
 .account-dropdown .info .content .name a:hover {
-    color: #666;
+    color: #258687;
 }
 
 .account-dropdown .info .content .email {
@@ -1538,7 +1538,7 @@ section {
 }
 
 .account-dropdown__item a:hover {
-    background: #4272d7;
+    background: #258687;
     color: #fff;
 }
 
@@ -1565,7 +1565,7 @@ section {
 }
 
 .account-dropdown__footer a:hover {
-    background: #4272d7;
+    background: #258687;
     color: #fff;
 }
 
@@ -1641,11 +1641,11 @@ section {
 }
 
 .navbar-sidebar .navbar__list li a:hover {
-    color: #4272d7;
+    color: #258687;
 }
 
 .navbar-sidebar .navbar__list li.active > a {
-    color: #4272d7;
+    color: #258687;
 }
 
 .has-sub {
@@ -1758,7 +1758,7 @@ section {
 }
 
 .header-mobile .navbar-mobile .navbar-mobile__list li a:hover {
-    color: #4272d7;
+    color: #258687;
 }
 
 .header-mobile .navbar-mobile .navbar-mobile__list li a > i {
@@ -1926,7 +1926,7 @@ section {
 }
 
 .mess__footer a:hover, .email__footer a:hover, .notifi__footer a:hover {
-    color: #3868cd;
+    color: #258687;
 }
 
 .mess-dropdown {
@@ -2201,7 +2201,7 @@ section {
 }
 
 .account2 > a:hover {
-    color: #666;
+    color: #258687;
 }
 
 .menu-sidebar2__content {
@@ -2569,7 +2569,7 @@ section {
 }
 
 .setting-menu .account-dropdown__item a:hover {
-    color: #fff;
+    color: #258687;
 }
 
 .show-sidebar {
@@ -2700,7 +2700,7 @@ section {
 }
 
 .header__navbar ul li a:hover {
-    color: #4272d7;
+    color: #258687;
 }
 
 .header__navbar ul li a:hover .bot-line {
@@ -2801,7 +2801,7 @@ section {
 }
 
 .header__navbar .header3-sub-list li a:hover {
-    color: #4272d7;
+    color: #258687;
     background: #f7f7f7;
 }
 
@@ -2898,7 +2898,7 @@ section {
 }
 
 .setting-dropdown .account-dropdown__item a:hover {
-    color: #fff;
+    color: #258687;
 }
 
 .header-button-item {
@@ -2926,7 +2926,7 @@ section {
 }
 
 .account-item--style2 .content a:hover {
-    color: #fff;
+    color: #258687;
 }
 
 .account-item--style2 .account-dropdown {
@@ -3035,7 +3035,7 @@ section {
 }
 
 .header4-wrap .header__tool .account-item--style2 .content a:hover {
-    color: #222;
+    color: #258687;
 }
 
 .navbar-sidebar3 {
@@ -3429,7 +3429,7 @@ section {
 }
 
 .au-task__item-inner .task a:hover {
-    color: #333;
+    color: #258687;
 }
 
 .au-task__item-inner .time {
@@ -3704,7 +3704,7 @@ section {
 }
 
 .au-chat-info .nick a:hover {
-    color: #666;
+    color: #258687;
 }
 
 .au-chat__content {
@@ -4395,7 +4395,7 @@ section {
 }
 
 .table-data__info span a:hover {
-    color: #666;
+    color: #258687;
 }
 
 .more {
@@ -4848,11 +4848,11 @@ section {
 }
 
 .au-breadcrumb__list .active a {
-    color: #999;
+    color: #258687;
 }
 
 .au-breadcrumb__list .active a:hover {
-    color: #333;
+    color: #258687;
 }
 
 .au-breadcrumb2 {
@@ -4883,7 +4883,7 @@ section {
 }
 
 .au-breadcrumb3 .au-breadcrumb__list .active a:hover {
-    color: #ccc;
+    color: #258687;
 }
 
 .line-seprate {
@@ -14649,3 +14649,4 @@ section {
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
 }
+
