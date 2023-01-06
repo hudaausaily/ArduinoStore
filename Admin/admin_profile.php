@@ -19,36 +19,35 @@ require_once('./sidebar.php');
 </head>
 <body>
 
-
-<div class="page-container">
-    <div  id="container-hide">
-
-<div class="main-content">
-
-
-             <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card">
-
-   <h3 style="padding:20px;" class="heading">admin account</h3>
-
-   <div class="box-container">
-
- 
-
-   <?php
+<?php
    $admin_id =['admin_id'];
       $select_accounts = $conn->prepare("SELECT * FROM `admins`");
       $select_accounts->execute();
       if($select_accounts->rowCount() > 0){
          while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){   
    ?>
-   <div class="box">
-      <p style="padding:20px;"> admin id : <span><?= $fetch_accounts['id']; ?></span> </p>
-      <p style="padding:20px;"> admin name : <span><?= $fetch_accounts['name']; ?></span> </p>
-      <div class="flex-btn">
+   <div class="page-container">
+    <div  id="container-hide">
+
+<div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong class="card-title mb-3">Profile Card</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mx-auto d-block">
+                                            <img class="rounded-circle mx-auto d-block" src="images/icon/avatar-01.jpg" alt="Card image cap">
+                                            <h5 class="text-sm-center mt-2 mb-1">admin id : <span><?= $fetch_accounts['id']; ?></span></h5>
+                                            <div class="card-text text-sm-center">admin name : <span><?= $fetch_accounts['name']; ?></span> </div>
+                                            
+                                          </div>
+                                        <hr>
+                                        <div class="card-text text-sm-center">
+                                        <div class="flex-btn">
          <a style="margin:20px;" href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" onclick="return confirm('delete this account?')" class="delete-btn">delete</a>
          <?php
             if($fetch_accounts['id'] == $admin_id){
@@ -56,38 +55,18 @@ require_once('./sidebar.php');
             }
          ?>
       </div>
-   </div>
-   <?php
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <?php
          }
       }else{
          echo '<p class="empty">no accounts available!</p>';
       }
-   ?>
 
-   </div>
-   </div>
-
-   </div>
-
-   </div>
-
-   </div>
-
-   </div>
-
-   </div>
-
-   </div>
-
-   </div>
-
-
-
-
-
-
-
-
+?>
 
 
 
