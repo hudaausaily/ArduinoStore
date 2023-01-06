@@ -1145,15 +1145,19 @@ section {
     transform: rotate(45deg);
 }
 
+
 .form-control {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
 }
 
-.card {
+.card  {
     margin-bottom: 30px;
+    
+
 }
+
 
 .input-group-addon {
     background-color: transparent;

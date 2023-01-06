@@ -1,5 +1,4 @@
 
-</style>
 <?php require_once('./connectdb.php');
 require_once('./sidebar.php');
 
@@ -36,18 +35,13 @@ require_once('./sidebar.php');
                                         <th class="text-center">NAME</th>
                                         <th class="text-center">PHONE NO.</th>
                                         <th class="text-center">EMAIL</th>
-                                        <th class="text-center">ADDRESS</th>
-                                        <th class="text-center">TOTAL PRODUCTS</th>
-                                        <th class="text-center">TOTAL PRICE</th>
-                                        <th class="text-center">PAYMENT METHOD</th>
-                                        <th class="text-center">STATUS</th>
-                                        <th class="text-center">PLACED ON</th>
-                                        <th></th>
+                                        <th class="text-center">MESSAGE</th>
+                                    
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $select_orders = $conn->prepare("SELECT * FROM `orders`"); 
+                                        $select_orders = $conn->prepare("SELECT * FROM `messages`"); 
                                         $select_orders->execute();
                                         if($select_orders->rowCount() > 0){
                                             while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){ 
@@ -57,13 +51,8 @@ require_once('./sidebar.php');
                                         <td class="align-middle text-center"><?= $fetch_orders['name']; ?></td>
                                         <td class="align-middle text-center"><?= $fetch_orders['number']; ?></td>
                                         <td class="align-middle text-center"><?= $fetch_orders['email']; ?></td>
-                                         <td class="align-middle text-center"><?= $fetch_orders['address']; ?></td>
-                                        <td class="align-middle text-center "><?= $fetch_orders['total_products']; ?></td>
-                                        <td class="align-middle text-center "><?= $fetch_orders['total_price']; ?></td>
-                                        <td class="align-middle text-center "><?= $fetch_orders['method']; ?></td>
-                                        <td class="align-middle text-center"><?= $fetch_orders['payment_status']; ?></td>
-                                        <td class="align-middle text-center"><?= $fetch_orders['placed_on']; ?></td>
-                                        <td class="align-middle text-center">
+                                         <td class="align-middle text-center"><?= $fetch_orders['message']; ?></td>
+                                      
                                             
                                         
                                     </tr>
@@ -84,17 +73,7 @@ require_once('./sidebar.php');
 </div>
                                 
 
-<script>
-    showadd = () => {
-        console.log('test')
-        document.getElementById('container-hide').style.display = "block"
-    }
 
-    hideadd = () => {
-        console.log('test')
-        window.location.reload('product.php')
-    }
-</script>
 
 <?php include('./footer.php'); ?>
     
