@@ -237,7 +237,7 @@ if(isset($_POST['add_product'])){
                                                     <i class=""></i>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                <a href="./products.php?delete=<?= $fetch_products['id']; ?>" class="zmdi zmdi-delete text-dark" onclick="return confirm('delete this product?');">
+                                                <a href="./product.php?delete=<?= $fetch_products['id']; ?>" class="zmdi zmdi-delete text-dark" onclick="return confirm('delete this product?');">
                                                 </a>
                                                 </button>
                                             </div>

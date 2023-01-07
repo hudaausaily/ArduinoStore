@@ -161,7 +161,6 @@ if(isset($_POST['add_category'])){
                                             <div class="table-data-feature">
                                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <a href="update_category.php?update=<?= $fetch_category['category_id']; ?>" class="zmdi zmdi-edit text-dark"></a>
-                                                    <i class=""></i>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
                                                 <a href="./category.php?delete=<?= $fetch_category['category_id']; ?>" class="zmdi zmdi-delete text-dark" onclick="return confirm('delete this category?');">

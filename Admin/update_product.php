@@ -61,7 +61,7 @@ if(isset($_POST['update'])){
    $details = $_POST['details'];
    $details = filter_var($details, FILTER_SANITIZE_STRING);
 
-   $update_product = $conn->prepare("UPDATE `product` SET name = ?, details = ? WHERE id = ?");
+   $update_product = $conn->prepare("UPDATE `products` SET name = ?, details = ? WHERE id = ?");
    $update_product->execute([$name, $details, $pid]);
 
    $message[] = 'product updated successfully!';
@@ -77,7 +77,7 @@ if(isset($_POST['update'])){
       if($image_size_01 > 2000000){
          $message[] = 'image size is too large!';
       }else{
-         $update_image_01 = $conn->prepare("UPDATE `product` SET image_01 = ? WHERE id = ?");
+         $update_image_01 = $conn->prepare("UPDATE `products` SET image_01 = ? WHERE id = ?");
          $update_image_01->execute([$image_01, $pid]);
          move_uploaded_file($image_tmp_name_01, $image_folder_01);
          unlink('../uploaded_img/'.$old_image_01);
@@ -102,7 +102,7 @@ if(isset($_POST['update'])){
 
                               <?php
                                  $update_id = $_GET['update'];
-                                 $select_product = $conn->prepare("SELECT * FROM `product` WHERE id = ?");
+                                 $select_product = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
                                  $select_product->execute([$update_id]);
                                  if($select_product->rowCount() > 0){
                                     while($fetch_product = $select_product->fetch(PDO::FETCH_ASSOC)){ 
