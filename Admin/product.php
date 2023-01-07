@@ -19,75 +19,79 @@ require_once('./sidebar.php');
 
 if(isset($_POST['add_product'])){
 
-   $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING);
-   $price = $_POST['price'];
-   $price = filter_var($price, FILTER_SANITIZE_STRING);
-   $details = $_POST['details'];
-   $details = filter_var($details, FILTER_SANITIZE_STRING);
-   $cat = $_POST['category'];
-   $cat = filter_var($cat, FILTER_SANITIZE_STRING);
-
-   $image_01 = $_FILES['image_01']['name'];
-   $image_01 = filter_var($image_01, FILTER_SANITIZE_STRING);
-   $image_size_01 = $_FILES['image_01']['size'];
-   $image_tmp_name_01 = $_FILES['image_01']['tmp_name'];
-   $image_folder_01 = '../uploaded_img/'.$image_01;
-
-   $image_02 = $_FILES['image_02']['name'];
-   $image_02 = filter_var($image_02, FILTER_SANITIZE_STRING);
-   $image_size_02 = $_FILES['image_02']['size'];
-   $image_tmp_name_02 = $_FILES['image_02']['tmp_name'];
-   $image_folder_02 = '../uploaded_img/'.$image_02;
-
-   $image_03 = $_FILES['image_03']['name'];
-   $image_03 = filter_var($image_03, FILTER_SANITIZE_STRING);
-   $image_size_03 = $_FILES['image_03']['size'];
-   $image_tmp_name_03 = $_FILES['image_03']['tmp_name'];
-   $image_folder_03 = '../uploaded_img/'.$image_03;
-
-   $select_products = $conn->prepare("SELECT * FROM `products` WHERE name = ?");
-   $select_products->execute([$name]);
-
-   if($select_products->rowCount() > 0){
-      $message[] = 'product name already exist!';
-   }else{
-
-      $insert_products = $conn->prepare("INSERT INTO `products`( name, details, price, image_01, image_02, image_03, category_name) VALUES(?,?,?,?,?,?,?)");
-      $insert_products->execute([ $name, $details, $price, $image_01, $image_02, $image_03, $cat]);
-
-      if($insert_products){
-         if($image_size_01 > 2000000 OR $image_size_02 > 2000000 OR $image_size_03 > 2000000){
-            $message[] = 'image size is too large!';
-         }else{
-            move_uploaded_file($image_tmp_name_01, $image_folder_01);
-            move_uploaded_file($image_tmp_name_02, $image_folder_02);
-            move_uploaded_file($image_tmp_name_03, $image_folder_03);
-            $message[] = 'new product added!';
-         }
-
-      }
-
-   }  
-};
-
-if(isset($_GET['delete'])){
-
-   $delete_id = $_GET['delete'];
-   $delete_product_image = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
-   $delete_product_image->execute([$delete_id]);
-   $fetch_delete_image = $delete_product_image->fetch(PDO::FETCH_ASSOC);
-   unlink('../uploaded_img/'.$fetch_delete_image['image_01']);
-   unlink('../uploaded_img/'.$fetch_delete_image['image_02']);
-   unlink('../uploaded_img/'.$fetch_delete_image['image_03']);
-   $delete_product = $conn->prepare("DELETE FROM `products` WHERE id = ?");
-   $delete_product->execute([$delete_id]);
-   $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE pid = ?");
-   $delete_cart->execute([$delete_id]);
-   $delete_wishlist = $conn->prepare("DELETE FROM `wishlist` WHERE pid = ?");
-   $delete_wishlist->execute([$delete_id]);
-   header('location:products.php');
-}
+    $name = $_POST['name'];
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $price = $_POST['price'];
+    $price = filter_var($price, FILTER_SANITIZE_STRING);
+    $details = $_POST['details'];
+    $details = filter_var($details, FILTER_SANITIZE_STRING);
+    $catname = $_POST['category'];
+    $catname = filter_var($catname, FILTER_SANITIZE_STRING);
+ 
+    $image_01 = $_FILES['image_01']['name'];
+    $image_01 = filter_var($image_01, FILTER_SANITIZE_STRING);
+    $image_size_01 = $_FILES['image_01']['size'];
+    $image_tmp_name_01 = $_FILES['image_01']['tmp_name'];
+    $image_folder_01 = '../uploaded_img/'.$image_01;
+ 
+    $image_02 = $_FILES['image_02']['name'];
+    $image_02 = filter_var($image_02, FILTER_SANITIZE_STRING);
+    $image_size_02 = $_FILES['image_02']['size'];
+    $image_tmp_name_02 = $_FILES['image_02']['tmp_name'];
+    $image_folder_02 = '../uploaded_img/'.$image_02;
+ 
+    $image_03 = $_FILES['image_03']['name'];
+    $image_03 = filter_var($image_03, FILTER_SANITIZE_STRING);
+    $image_size_03 = $_FILES['image_03']['size'];
+    $image_tmp_name_03 = $_FILES['image_03']['tmp_name'];
+    $image_folder_03 = '../uploaded_img/'.$image_03;
+ 
+    $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+    $select_products->execute([$name]);
+ 
+    if($select_products->rowCount() > 0){
+       $message[] = 'product name already exist!';
+    }else{
+ 
+       $insert_products = $conn->prepare("INSERT INTO `products`(name, details, price, image_01, image_02, image_03, category_name) VALUES(?,?,?,?,?,?,?)");
+       $insert_products->execute([$name, $details, $price, $image_01, $image_02, $image_03]);
+ 
+       if($insert_products){
+          if($image_size_01 > 2000000 OR $image_size_02 > 2000000 OR $image_size_03 > 2000000){
+             $message[] = 'image size is too large!';
+          }else{
+             move_uploaded_file($image_tmp_name_01, $image_folder_01);
+             move_uploaded_file($image_tmp_name_02, $image_folder_02);
+             move_uploaded_file($image_tmp_name_03, $image_folder_03);
+             $message[] = 'new product added!';
+          }
+ 
+       }
+ 
+    }  
+ 
+ };
+ 
+ if(isset($_GET['delete'])){
+ 
+    $delete_id = $_GET['delete'];
+    $delete_product_image = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+    $delete_product_image->execute([$delete_id]);
+    $fetch_delete_image = $delete_product_image->fetch(PDO::FETCH_ASSOC);
+    unlink('../uploaded_img/'.$fetch_delete_image['image_01']);
+    unlink('../uploaded_img/'.$fetch_delete_image['image_02']);
+    unlink('../uploaded_img/'.$fetch_delete_image['image_03']);
+    $delete_product = $conn->prepare("DELETE FROM `products` WHERE id = ?");
+    $delete_product->execute([$delete_id]);
+    $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE pid = ?");
+    $delete_cart->execute([$delete_id]);
+    $delete_wishlist = $conn->prepare("DELETE FROM `wishlist` WHERE pid = ?");
+    $delete_wishlist->execute([$delete_id]);
+    header('location:product.php');
+ }
+ 
+ 
+ ?>
 
 ?>
 
@@ -175,38 +179,10 @@ if(isset($_GET['delete'])){
                                                 <input type="file" id="file-multiple-input" required name="image_03" multiple="" class="form-control-file">
                                             </div>
                                         </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label class=" form-control-label">Product Discount</label>
-                                            </div>
-                                            <div class="col col-md-9">
-                                                <div class="form-check">
-                                                    <div class="checkbox">
-                                                        <label for="checkbox1" class="form-check-label ">
-                                                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">
-                                                                In Sale
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label for="checkbox2" class="form-check-label ">
-                                                            <input type="checkbox" id="checkbox2" name="checkbox2" value="option2" class="form-check-input">
-                                                                Not In Sale
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3"></div>
-                                            <div class="col-12 col-md-4">
-                                                <input type="text" id="text-input" name="discount" placeholder="Product New Price" class="form-control">
-                                                <small class="form-text text-muted">add new price to <strong>product</strong></small>
-                                            </div>
+                                        <div class="card-footer">
+                                            <input type="submit" value="Submit" name="add_product" class="btn btn-success btn-md" onclick="hideadd()">
                                         </div>
                                     </form>
-                                </div>
-                                <div class="card-footer">
-                                    <input type="submit" value="Submit" name="add_product" class="btn btn-success btn-md" onclick="hideadd()">
                                 </div>
                             </div>
                         </div>
